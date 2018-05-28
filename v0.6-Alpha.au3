@@ -28,11 +28,11 @@ func main()
    record()
 Sleep(500)
 status()
-while $status="s≥ucha"
+while $status="s≈Çucha"
    Sleep(520)
 	  status()
 	  WEnd
-if $status="nie rozumie" or $status="sprawdü" Then
+if $status="nie rozumie" or $status="sprawd≈∫" Then
     $activeWindow = WinGetHandle("[ACTIVE]")
   ; SoundPlay($baza&"\nie_zrozumialam.wav",1)
    ControlClick($war,"","[CLASS:Chrome_RenderWidgetHostHWND]","left",1,77, 29)
@@ -55,9 +55,9 @@ func status()
    If  MemoryReadPixel(	485 ,210 ,$war)=0x1155CC then
 	  $status="nie rozumie"
    ElseIf  MemoryReadPixel(	179,190,$war)=0x777777  Then
-	  	  $status="s≥ucha"
+	  	  $status="s≈Çucha"
 	     elseif MemoryReadPixel(240 ,205 ,$war)=0x1A0DAB Then
-	  $status="sprawdü"
+	  $status="sprawd≈∫"
 	    elseif MemoryReadPixel(103 ,150 ,$war)=0xFBBC05 then
 	  $status="czeka"
    ;Elseif MemoryReadPixel(8+682,85+45,$war)=0x656565 then
@@ -87,21 +87,21 @@ func wyswietlNapis()
 switch $doTlumaczenia
  Case "woda"
 	 $respond="water"
- Case "zdjÍcie"
+ Case "zdjƒôcie"
 	 $respond="image"
- Case "krzes≥o"
+ Case "krzes≈Ço"
 	 $respond="chair"
  Case "pies"
 	 $respond="dog"
  Case "kot"
 	 $respond="cat"
- Case "samochÛd"
+ Case "samoch√≥d"
 	 $respond="car"
  Case "ryba"
 	 $respond="fish"
  Case "butelka"
 	 $respond="bottle"
- Case "szczÍúcie"
+ Case "szczƒô≈õcie"
 	 $respond="programming"
   EndSwitch
   SoundPlay($baza&"\"&$respond&".wav")
@@ -143,25 +143,25 @@ GUICtrlSetBkColor($guig,0xFFFFFF)
 Sleep(50)
 Next
 GUIDelete($gui)
-case "w≥πcz facebooka"
+case "w≈ÇƒÖcz facebooka"
    send("{LSHIFT DOWN}")
    ShellExecute("chrome.exe", "www.facebook.com","","")
     send("{LSHIFT up}")
-case "Jak wysoka jest Wieøa Eiffla"
+case "Jak wysoka jest Wie≈ºa Eiffla"
      SoundPlay($baza&"\eiffla.wav",1)
-  case "Ile lat ma Statua Wolnoúci"
+  case "Ile lat ma Statua Wolno≈õci"
 	 SoundPlay($baza&"\statuawolnosci.wav",1)
-  case "Gdzie leøy Sosnowiec"
+  case "Gdzie le≈ºy Sosnowiec"
 	 SplashImageOn("",$baza&"\sosnowiec.jpg",1000,800)
 	  SoundPlay($baza&"\tutaj.wav",1)
 	  Sleep(6000)
 	  Splashoff()
-case "gdzie leøy Sosnowiec"
+case "gdzie le≈ºy Sosnowiec"
 	 SplashImageOn("",$baza&"\sosnowiec.jpg",1000,800)
 	  SoundPlay($baza&"\tutaj.wav",1)
 	  Sleep(6000)
 	  Splashoff()
-case "Opowiedz kawa≥"
+case "Opowiedz kawa≈Ç"
    if $licznikZartow<4 then
   SoundPlay($baza&"\suchar"&$licznikZartow&".wav",1)
   else
@@ -169,7 +169,7 @@ case "Opowiedz kawa≥"
  endif
  $licznikZartow+=1
 
- case "powiedz kawa≥"
+ case "powiedz kawa≈Ç"
    if $licznikZartow<4 then
   SoundPlay($baza&"\suchar"&$licznikZartow&".wav",1)
   else
@@ -177,7 +177,7 @@ case "Opowiedz kawa≥"
  endif
  $licznikZartow+=1
 
- case "opowiedz kawa≥"
+ case "opowiedz kawa≈Ç"
    if $licznikZartow<4 then
   SoundPlay($baza&"\suchar"&$licznikZartow&".wav",1)
   else
@@ -185,7 +185,7 @@ case "Opowiedz kawa≥"
  endif
  $licznikZartow+=1
 
- case "Powiedz kawa≥"
+ case "Powiedz kawa≈Ç"
    if $licznikZartow<4 then
   SoundPlay($baza&"\suchar"&$licznikZartow&".wav",1)
   else
@@ -196,24 +196,24 @@ case "Opowiedz kawa≥"
 case "notatnik"
   run("notepad.exe")
 
-case "w≥πcz notatnik"
+case "w≈ÇƒÖcz notatnik"
   run("notepad.exe")
 
   case "odpal notatnik"
   run("notepad.exe")
 
-  case "muszÍ zrobiÊ notatki"
+  case "muszƒô zrobiƒá notatki"
   run("notepad.exe")
 
-  case "kÛ≥ko i krzyøyk"
+  case "k√≥≈Çko i krzy≈ºyk"
    tictac()
- case "zagrajmy w kÛ≥ko i krzyøyk"
+ case "zagrajmy w k√≥≈Çko i krzy≈ºyk"
    tictac()
-    case "grajmy w kÛ≥ko i krzyøyk"
+    case "grajmy w k√≥≈Çko i krzy≈ºyk"
    tictac()
-    case "Zagrajmy w kÛ≥ko i krzyøyk"
+    case "Zagrajmy w k√≥≈Çko i krzy≈ºyk"
    tictac()
-    case "Grajmy w kÛ≥ko i krzyøyk"
+    case "Grajmy w k√≥≈Çko i krzy≈ºyk"
    tictac()
    case "zamknij notatnik"
 	  processclose("notepad.exe")
@@ -226,48 +226,48 @@ case "napisz maila"
 	;  sleep(100)
 	;  guigetmsg()
 	;  WEnd
-  case "Zagraj coú na pianinie"
+  case "Zagraj co≈õ na pianinie"
 	 grajnapianinie()
-	   case "zagraj coú na pianinie"
+	   case "zagraj co≈õ na pianinie"
 	 grajnapianinie()
 	   case "Zagraj na pianinie"
 	 grajnapianinie()
 	 case "zagraj na pianinie"
 	 grajnapianinie()
 
-  Case "DziÍki za pomoc"
+  Case "Dziƒôki za pomoc"
 	   SoundPlay($baza&"\dozobaczenia.wav",1)
 	   sleep(100)
 	   SoundPlay($baza&"\glosujciena.wav",1)
 
-	    Case "DziÍki"
+	    Case "Dziƒôki"
 	   SoundPlay($baza&"\dozobaczenia.wav",1)
 	   sleep(100)
 	   SoundPlay($baza&"\glosujciena.wav",1)
-	    Case "dziÍki za pomoc"
+	    Case "dziƒôki za pomoc"
 	   SoundPlay($baza&"\dozobaczenia.wav",1)
 	   sleep(100)
 	   SoundPlay($baza&"\glosujciena.wav",1)
-	   Case "dziÍki"
+	   Case "dziƒôki"
 	   SoundPlay($baza&"\dozobaczenia.wav",1)
 	   sleep(100)
 	   SoundPlay($baza&"\glosujciena.wav",1)
 
-Case "czeúÊ"
+Case "cze≈õƒá"
    SoundPlay($baza&"\przedstawsie.wav",1)
 
-   Case "przedstaw siÍ"
+   Case "przedstaw siƒô"
    SoundPlay($baza&"\przedstawsie.wav",1)
 
    Case "przedstaw"
    SoundPlay($baza&"\przedstawsie.wav",1)
 
-   Case "Przedstaw siÍ"
+   Case "Przedstaw siƒô"
    SoundPlay($baza&"\przedstawsie.wav",1)
 
-   Case "Przywitaj siÍ"
+   Case "Przywitaj siƒô"
    SoundPlay($baza&"\przedstawsie.wav",1)
-   Case "przywitaj siÍ"
+   Case "przywitaj siƒô"
    SoundPlay($baza&"\przedstawsie.wav",1)
 
    Case "Przywitaj"
@@ -275,9 +275,9 @@ Case "czeúÊ"
 
    Case "przywitaj"
    SoundPlay($baza&"\przedstawsie.wav",1)
-case "ktÛra godzina"
+case "kt√≥ra godzina"
    godzina()
-case "KtÛra godzina"
+case "Kt√≥ra godzina"
    godzina()
 ;case else
   ; if $czyBylaOdpowiedz=false then    SoundPlay($baza&"\niepomoge.wav",1)
@@ -372,7 +372,7 @@ if @min =19  then  SoundPlay($baza&"\19m.wav",1) ;
    if @min =40  then  SoundPlay($baza&"\40m.wav",1)
    if @min =50  then  SoundPlay($baza&"\50m.wav",1)
 
-   ;<><><><><><><><><><><><>dok≥adne <><><><><><><><><><><><><><><><><><><><><><><><><>
+   ;<><><><><><><><><><><><>dok≈Çadne <><><><><><><><><><><><><><><><><><><><><><><><><>
 if @min =21  then
    SoundPlay($baza&"\20m.wav",1)
    SoundPlay($baza&"\1m.wav",1)
