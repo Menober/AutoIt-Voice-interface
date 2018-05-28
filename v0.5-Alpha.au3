@@ -26,11 +26,11 @@ func main()
    record()
 Sleep(500)
 status()
-while $status="s³ucha"
+while $status="sÂ³ucha"
    Sleep(520)
 	  status()
 	  WEnd
-if $status="nie rozumie" or $status="sprawdŸ" Then
+if $status="nie rozumie" or $status="sprawdÅ¸" Then
     $activeWindow = WinGetHandle("[ACTIVE]")
   ; SoundPlay($baza&"\nie_zrozumialam.wav",1)
    ControlClick($war,"","[CLASS:Chrome_RenderWidgetHostHWND]","left",1,29, 23)
@@ -51,11 +51,11 @@ EndFunc
 ; <><><>><><><><><><><><><><><><><><><><><><>WYKRYWANIE STATUSU<><><><><><><><><><><><>><><>
 func status()
    If MemoryReadPixel(	8+143,85+79,$war)=0x787878 or MemoryReadPixel(	8+137,85+69,$war)=0x777777  Then
-	  	  $status="s³ucha"
+	  	  $status="sÂ³ucha"
    ElseIf  MemoryReadPixel(	8+374,85+77,$war)=0x2362D0 then
 	  $status="nie rozumie"
 	     elseif MemoryReadPixel(8+193,85+86,$war)=0x766ECD Then
-	  $status="sprawdŸ"
+	  $status="sprawdÅ¸"
 	    elseif MemoryReadPixel(8+86,85+131,$war)=0xFBBC05 then
 	  $status="czeka"
    Elseif MemoryReadPixel(8+682,85+45,$war)=0x656565 then
@@ -85,21 +85,21 @@ func wyswietlNapis()
 switch $doTlumaczenia
  Case "woda"
 	 $respond="water"
- Case "zdjêcie"
+ Case "zdjÃªcie"
 	 $respond="image"
- Case "krzes³o"
+ Case "krzesÂ³o"
 	 $respond="chair"
  Case "pies"
 	 $respond="dog"
  Case "kot"
 	 $respond="cat"
- Case "samochód"
+ Case "samochÃ³d"
 	 $respond="car"
  Case "ryba"
 	 $respond="fish"
  Case "butelka"
 	 $respond="bottle"
- Case "szczêœcie"
+ Case "szczÃªÅ“cie"
 	 $respond="programming"
   EndSwitch
   SoundPlay($baza&"\"&$respond&".wav")
@@ -139,20 +139,20 @@ GUICtrlSetBkColor($guig,0xFFFFFF)
 Sleep(50)
 Next
 GUIDelete($gui)
-case "w³¹cz facebooka"
+case "wÂ³Â¹cz facebooka"
    send("{LSHIFT DOWN}")
    ShellExecute("chrome.exe", "www.facebook.com","","")
     send("{LSHIFT up}")
-case "Jak wysoka jest Wie¿a Eiffla"
+case "Jak wysoka jest WieÂ¿a Eiffla"
      SoundPlay($baza&"\eiffla.wav",1)
-  case "Ile lat ma Statua Wolnoœci"
+  case "Ile lat ma Statua WolnoÅ“ci"
 	 SoundPlay($baza&"\statuawolnosci.wav",1)
-  case "Gdzie le¿y Sosnowiec"
+  case "Gdzie leÂ¿y Sosnowiec"
 	 SplashImageOn("",$baza&"\sosnowiec.jpg",1000,800)
 	  SoundPlay($baza&"\tutaj.wav",1)
 	  Sleep(6000)
 	  Splashoff()
-case "Opowiedz kawa³"
+case "Opowiedz kawaÂ³"
    if $licznikZartow<4 then
   SoundPlay($baza&"\suchar"&$licznikZartow&".wav",1)
   else
@@ -162,13 +162,13 @@ case "Opowiedz kawa³"
 case "notatnik"
   run("notepad.exe")
 
-case "w³¹cz notatnik"
+case "wÂ³Â¹cz notatnik"
   run("notepad.exe")
 
   case "odpal notatnik"
   run("notepad.exe")
 
-  case "muszê zrobiæ notatki"
+  case "muszÃª zrobiÃ¦ notatki"
   run("notepad.exe")
 
   case "kalkulator"
@@ -177,7 +177,7 @@ case "w³¹cz notatnik"
     case "odpal kalkulator"
   run("calc.exe")
 
-  case "w³¹cz kalkulator"
+  case "wÂ³Â¹cz kalkulator"
   run("calc.exe")
 
 
@@ -193,18 +193,18 @@ case "Napisz maila"
 	;  sleep(100)
 	;  guigetmsg()
 	;  WEnd
-  case "Zagraj coœ na pianinie"
+  case "Zagraj coÅ“ na pianinie"
 	 grajnapianinie()
 
-  Case "Dziêki za pomoc"
+  Case "DziÃªki za pomoc"
 	   SoundPlay($baza&"\dozobaczenia.wav",1)
 	   sleep(100)
 	   SoundPlay($baza&"\glosujciena.wav",1)
 
-Case "czeœæ"
+Case "czeÅ“Ã¦"
    SoundPlay($baza&"\przedstawsie.wav",1)
 
-case "która godzina"
+case "ktÃ³ra godzina"
    godzina()
 
 case else
@@ -303,7 +303,7 @@ if @min =19  then  SoundPlay($baza&"\19m.wav",1) ;
    if @min =40  then  SoundPlay($baza&"\40m.wav",1)
    if @min =50  then  SoundPlay($baza&"\50m.wav",1)
 
-   ;<><><><><><><><><><><><>dok³adne <><><><><><><><><><><><><><><><><><><><><><><><><>
+   ;<><><><><><><><><><><><>dokÂ³adne <><><><><><><><><><><><><><><><><><><><><><><><><>
 if @min =21  then
    SoundPlay($baza&"\20m.wav",1)
    SoundPlay($baza&"\1m.wav",1)
